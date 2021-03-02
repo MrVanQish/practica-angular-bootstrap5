@@ -14,6 +14,9 @@ export class DetallesComponent  {
 
 
 
+  borrarDetalles(){
+    this.claseDetalles = new Detalles()
+  }
 
 
 

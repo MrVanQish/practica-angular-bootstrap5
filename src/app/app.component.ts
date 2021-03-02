@@ -11,6 +11,8 @@ import { Detalles } from './detalles'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
+
+
 export class AppComponent {
   areas: string[] = [];
   departamentos: string[] = [];
@@ -18,6 +20,8 @@ export class AppComponent {
   detallesBool = false;
   auxString: string;
   titulotarjeta: string;
+
+  
 
 
   detalles1 = new Detalles();
@@ -78,4 +82,7 @@ export class AppComponent {
       this.detallesBool = false;
     }
   }
+
+
+
 }

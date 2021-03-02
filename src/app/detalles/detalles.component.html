@@ -1,10 +1,49 @@
 <div class="card bg-primary ml-1" style="width: 18rem">
   <div class="card-body bg-warning">
-    <h5 class="card-title text-center h3"> {{ titulotarjeta | uppercase}}  </h5>
-    <p class="card-text "> Town: {{ claseDetalles.town }} </p>
-    <p class="card-text "> Boss: {{ claseDetalles.boss }} </p>
-    <p class="card-text "> Age: {{ claseDetalles.age }} </p>
-    <p class="card-text "> Last_degree: {{ claseDetalles.last_degree }} </p>
-
+    <h5 class="card-title text-center h3">{{ titulotarjeta | uppercase }}</h5>
+    <div class="card card-body bg-white">
+      <p class="card-text">Town: {{ claseDetalles.town }}</p>
+      <p class="card-text">Boss: {{ claseDetalles.boss }}</p>
+      <p class="card-text">Age: {{ claseDetalles.age }}</p>
+      <p class="card-text">Last_degree: {{ claseDetalles.last_degree }}</p>
+    </div>
+    <p class="card-text text-center h3">EDITAR DETALLES</p>
+    <div class="container text-center my-auto">
+      Town:
+      <input
+        type="text"
+        class="input-group-text"
+        id="basic-addon1 "
+        [(ngModel)]="claseDetalles.town"
+        placeholder="change town"
+      />
+      Boss:
+      <input
+        type="text"
+        class="input-group-text"
+        id="basic-addon1 "
+        [(ngModel)]="claseDetalles.boss"
+        placeholder="change boss"
+      />
+      Age:
+      <input
+        type="text"
+        class="input-group-text"
+        id="basic-addon1 "
+        [(ngModel)]="claseDetalles.age"
+        placeholder="change age"
+      />
+      Last_degree:
+      <input
+        type="text"
+        class="input-group-text"
+        id="basic-addon1 "
+        [(ngModel)]="claseDetalles.last_degree"
+        placeholder="change last_degree"
+      />
+      <button (click)="borrarDetalles()" class="btn btn-primary mt-1 mx-auto" style="width: 100px">
+        Borrar
+      </button>
+    </div>
   </div>
 </div>
