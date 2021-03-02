@@ -1,0 +1,10 @@
+{
+    "name": "Desarrollo",
+    "departament": "TI",
+    "details": [{
+        "town": "tulua",
+        "boss": "Entrenador",
+        "age": 18,
+        "last_degree": "msc"
+    }]
+}

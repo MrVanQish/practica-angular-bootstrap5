@@ -1,0 +1,10 @@
+{
+    "name": "pqrs",
+    "departament": "Servicios",
+    "details": [{
+        "town": "tulua",
+        "boss": "Entrenador",
+        "age": 34,
+        "last_degree": "msc"
+    }]
+}
