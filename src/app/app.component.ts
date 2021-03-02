@@ -15,6 +15,7 @@ export class AppComponent {
   i: number = 0;
   detallesBool = false;
   auxString: string;
+  titulotarjeta : string;
 
   constructor(public json1: JsonService, public json2: JsonService) {
     this.json1
@@ -22,7 +23,7 @@ export class AppComponent {
       .forEach((a) => this.agregarNombreDepartamento(a));
 
     this.json2
-      .obtenerJson('https://raw.githubusercontent.com/MrVanQish/Python/main/s.json?token=AC2ULSZ4FTUM22VCSCWEPCDAHVV5U')
+      .obtenerJson('http://www.mocky.io/v2/5d4cc839330000520033742d')
       .forEach((b) => this.agregarDetalles(b));
 
     console.log(this.areas);
@@ -38,7 +39,7 @@ export class AppComponent {
   }
 
   agregarDetalles(b) {
-    
+
     this.detalles.push('town: ' + b['details'][0]['town']);
     this.detalles.push('boss: ' + b['details'][0]['boss']);
     this.detalles.push('age: ' + b['details'][0]['age']);
@@ -49,6 +50,8 @@ export class AppComponent {
 
   seleccionado(a) {
     let aux = this.areas.indexOf(a);
+
+    this.titulotarjeta=a;
 
     if (a == this.auxString) {
       this.detallesBool = true;

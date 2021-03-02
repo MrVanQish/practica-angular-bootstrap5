@@ -1,12 +1,16 @@
 <div class="row mt-3 ml-3">
   <div class="col-3">
     <ul class="list-group">
-      <li class="list-group-item h3 text-center bg-warning">Areas</li>
+      <li class="list-group-item h3 text-center bg-warning">AREAS</li>
       <button
+        
         type="button"
         (click)="seleccionado(a)"
+       
         class="btn btn-primary mb-1"
         *ngFor="let a of areas"
+
+        [routerLink]="['/detalles']"
       >
         {{ a }}
       </button>
@@ -15,23 +19,19 @@
 
   <div class="col-3">
     <ul class="list-group">
-      <li class="list-group-item h3 text-center bg-warning">Departamentos</li>
+      <li class="list-group-item h3 text-center bg-warning">DEPARTAMENTOS</li>
       <li class="btn btn-primary mb-1" *ngFor="let d of departamentos">
         {{ d }}
       </li>
     </ul>
   </div>
+  
 
-  <div class="col-5" *ngIf="detallesBool">
-    <!--   <ul class="list-group">
-      <li class="list-group-item h3 text-center bg-warning">Detalles</li>
-      <li class="card"  *ngFor="let f of detalles">{{ f }}</li>
-    </ul> -->
-    <div class="card" style="width: 18rem">
-      <div class="card-body">
-        <h5 class="card-title">{{ areas[0] | uppercase }}</h5>
-        <p class="card-text" *ngFor="let f of detalles">{{ f }}</p>
-      </div>
-    </div>
+  <div class="col-5 " *ngIf="detallesBool">
+  
+
+      <app-detalles [titulotarjeta]="titulotarjeta" [detalles]="detalles" ></app-detalles>
+
+
   </div>
 </div>
