@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AppComponent} from '../app.component'
+import { Detalles } from '../detalles'
 
 @Component({
   selector: 'app-detalles',
@@ -9,7 +10,7 @@ import { AppComponent} from '../app.component'
 export class DetallesComponent  {
 
   @Input() titulotarjeta : any;
-  @Input() detalles : any;
+  @Input() claseDetalles : Detalles;
 
 
 

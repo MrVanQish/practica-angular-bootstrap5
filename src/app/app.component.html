@@ -5,10 +5,12 @@
       <button
         
         type="button"
-        (click)="seleccionado(a)"
+        
        
         class="btn btn-primary mb-1"
         *ngFor="let a of areas"
+
+        (click)="seleccionado(a)"
 
         [routerLink]="['/detalles']"
       >
@@ -30,7 +32,7 @@
   <div class="col-5 " *ngIf="detallesBool">
   
 
-      <app-detalles [titulotarjeta]="titulotarjeta" [detalles]="detalles" ></app-detalles>
+      <app-detalles [titulotarjeta]="titulotarjeta" [claseDetalles]="detalles1" ></app-detalles>
 
 
   </div>
